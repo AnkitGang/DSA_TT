@@ -84,7 +84,7 @@ public class BinaryTreeTraversalIterative {
 		LinkedList<BinaryTreeNode<Integer>> queue = new LinkedList<>();
 		queue.add(root);
 		while(!queue.isEmpty()) {
-			//Remove first elemnt from queue
+			//Remove first element from queue
 			BinaryTreeNode<Integer> node = queue.removeFirst();
 			System.out.print(node.data + " ");
 			//Put parent left and right in queue
@@ -101,7 +101,7 @@ public class BinaryTreeTraversalIterative {
 		LinkedList<BinaryTreeNode<Integer>> queue = new LinkedList<>();
 		queue.add(root);
 		while(!queue.isEmpty()) {
-			//Remove first elemnt from queue
+			//Remove first element from queue
 			int countQueue = queue.size();
 			for(int i=0; i<countQueue; i++) {
 				BinaryTreeNode<Integer> currentNode = queue.poll();

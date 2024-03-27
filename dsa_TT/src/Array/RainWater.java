@@ -2,11 +2,14 @@ package Array;
 
 public class RainWater {  //LeetCode 42.
 	
-	
 	public static void main(String[] args) {
-		int [] pillars = {0, 1, 0, 2, 1, 3, 0, 2};
+		int [] pillars = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
 		if(pillars.length == 0)
 			System.out.println("No pillars exist, so cant store water");
+		
+		System.out.println("Pillars: ");
+		for(int elem: pillars)
+			System.out.print(elem + " ");
 		
 		//Left Max Pillar (Prefix Max)
 		int[] leftPillarMax = new int[pillars.length];
@@ -15,9 +18,11 @@ public class RainWater {  //LeetCode 42.
 			leftPillarMax[i] = Math.max(leftPillarMax[i-1], pillars[i]);
 		}
 		
-		System.out.println("Left Pillar Max");
+		
+		System.out.println("\nLeft Pillar Max");
 		for(int elem: leftPillarMax)
 			System.out.print(elem + " ");
+		
 		
 		//Right Max Pillar (Suffix Max)
 		int[] rightMaxPillar = new int[pillars.length];

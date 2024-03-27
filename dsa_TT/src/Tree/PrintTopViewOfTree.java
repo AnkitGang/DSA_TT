@@ -1,7 +1,10 @@
 package Tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 import java.util.TreeMap;
 
 public class PrintTopViewOfTree {
@@ -24,10 +27,33 @@ public class PrintTopViewOfTree {
 	static void printTopView(BinaryTreeNode<Integer> root) {
 		TreeMap<Integer, ArrayList<Integer>> map = new TreeMap<>();
 		topView(root, 0, map);
-		for(Map.Entry<K, V>)
+		for(Map.Entry<Integer, ArrayList<Integer>> m: map.entrySet()) {
+			System.out.println(m.getValue());
+		}
 	}
 	
 	public static void main(String[] args) {
-		
+		BinaryTreeTraversalRecursion bt = new BinaryTreeTraversalRecursion();
+		BinaryTreeNode<Integer> root = bt.insert();
+		printTopView(root);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -27,6 +27,6 @@ public class RabinKarpAlgorithm {
 		String pattern = "ABAD";
 		
 		int findIndex = searchPattern(text, pattern);
-		System.out.println(findIndex);
+		System.out.println("Found at index: " + findIndex);
 	}
 }
